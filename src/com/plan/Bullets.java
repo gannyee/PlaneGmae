@@ -8,11 +8,14 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 public class Bullets {
-	//定义子弹变量
+	//定义英雄机子弹变量
 	Image bImage;
-	//定义子弹图片
+/*	//定义敌机子弹
+	Image eImage;*/
+	//定义英雄机子弹图片
 	int bx ,by;
-	
+/*	//定义敌机子弹坐标
+	int ebx,eby;*/
 	//构造函数
 	public Bullets(Image bImage,int bx,int by){
 		this.bImage = bImage;
@@ -23,6 +26,7 @@ public class Bullets {
 	public void drawBullet(Graphics g){
 		g.drawImage(this.bImage, this.bx, this.by, null);
 	}
+	
 	//子弹的移动
 	public int moveBullet(){
 		this.by --;
@@ -32,5 +36,4 @@ public class Bullets {
 		}
 		return i;
 	}
-	
 }
